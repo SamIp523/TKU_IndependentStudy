@@ -1,0 +1,82 @@
+{% load admin_urls %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- 載入Google Font Noto Sans TC -->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <title>美妝守門人</title>
+
+        <!-- 設定背景及button的css -->
+        <style type="text/css">
+            #B2T{
+                height: 900px;
+                margin-top: 0px;
+                background: -webkit-linear-gradient(#2b939cff,#bdf0f5ff);
+                background: -o-linear-gradient(#2b939cff,#bdf0f5ff);
+                background: -moz-linear-gradient(#2b939cff,#bdf0f5ff);
+                background: linear-gradient(#2b939cff,#bdf0f5ff);
+            }
+            .button {
+                border: none;
+                color: white;
+                padding: 0px 28px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 15px 0px;
+                cursor: pointer;
+                border-radius: 25px;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 54px;
+                text-shadow: 0px 2px 2px  rgb(17, 61, 61);
+                box-shadow: 0px 2px 0px rgb(39, 130, 138);
+            }
+            .button:hover {
+                background-color: #c71c6c;
+            }
+        </style>
+    </head>
+    <body id = "B2T">
+        <!-- 背景及top bar開始-->
+        <div id = "top-bar" style="background-color:#1A8E99; background-size:100%; box-shadow: 0px 5px 0px rgb(39, 130, 138);">
+            <div style="padding-top: 25px">
+                <center>
+                    <img id = "robot-logo" style = "width: 70px; height: 130px; padding-bottom: 50px;" src = "https://drive.google.com/uc?export=download&id=1kPMvBgJmSEpO2R5KpNc2f_jgygSasKOG">
+                    <p id = "big_title" 
+                    style = "display: inline; color: #FFFDFA; 
+                    text-shadow: 0px 3px 0px rgb(27, 89, 95); 
+                    font-family: 'Noto Sans TC', sans-serif; font-size: 54px; 
+                    padding-left: 10px;">
+                    美妝守門人
+                    </p>
+                </center>
+            </div>
+        </div>
+        <!-- 背景及top bar結束-->
+
+        <!-- Button Group-->
+        <div id = btn_group style="padding-top:80px;">
+            <center>
+                <!-- first button-->
+                <p><button class="button" onclick="location.href='{% url 'SuitProduct' %}'" style="background-color: #62C9D4;">合適的產品</button></p>
+                <p><button class="button" onclick="location.href='{% url 'NonSuitProduct' %}'" style="background-color: #81D3DC;">不合適產品</button></p>
+                <p><button class="button" onclick="location.href='{% url 'WaitProduct' %}'" style="background-color: #A1DEE5;">待分類產品</button></p>
+            </center>
+        </div>
+        <!-- Button Group end-->
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+  
+</html>
